@@ -118,8 +118,7 @@ class filter
 
 	public function test()
 	{
-		$data = 'agenbwaogjoahowngowwj铅弹eaojn3igw393nlnag;efja;熟妇, 我们拥有歌啊叫啊感觉；啊如果后卫；哈；文化顾问哈根；喔和高额逼我我干恶你高傲坚强各种各样的神奇能力, 这是我们的世界, 在政论区, 傲视群雄.
-	egjaowegjaw;gaewjn4bhod多噶鞥；王啊日高；我哈围观哇诶和格瓦拉你噶军事委员会武汉年糕为何噶我 根；阿呢；昂 new；根；娃饿噶喝；韩国哇哦；故哈；为福音会';
+		$data = '我们去上学，小鸟在唱歌！';
 		$a = file('minganciku.php');
 		$b = file('badwords.php');
 		$lines = array_merge($a, $b);
@@ -139,8 +138,7 @@ $filter = new filter;
 
 $filter->loadFile('minganciku.php');
 $filter->loadFile('badwords.php');
-echo $filter->search('agenbwaogjoahowngowwj铅弹eaojn3igw393nlnag;efja;熟妇, 我们拥有歌啊叫啊感觉；啊如果后卫；哈；文化顾问哈根；喔和高额逼我我干恶你高傲坚强各种各样的神奇能力, 这是我们的世界, 在政论区, 傲视群雄.
-	egjaowegjaw;gaewjn4bhod多噶鞥；王啊日高；我哈围观哇诶和格瓦拉你噶军事委员会武汉年糕为何噶我 根；阿呢；昂 new；根；娃饿噶喝；韩国哇哦；故哈；为福音会');
+echo $filter->search('我们去上学，小鸟在唱歌！');
 echo '<br />';
 
 $filter->test();
