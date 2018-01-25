@@ -2,8 +2,8 @@ package main
 
 import (
     "fmt"
-    "os"
-    "strconv"
+//    "os"
+//    "strconv"
 )
 
 func printData(values []int) {
@@ -160,7 +160,29 @@ func mergeSort(values []int) {
     printData(merge(values))
 }
 
+
+func binarySearch(numbers []int, value int) int{
+    left := 0
+    right := len(numbers) - 1
+    mid := 0
+
+    for left <= right {
+        mid = (left + right) >> 1
+
+        if numbers[mid] == value {
+            return mid
+        } else if value < numbers[mid] {
+            right = mid - 1
+        } else {
+            left = mid + 1
+        }
+    }
+
+    return -1
+}
+
 func main() {
+    /*
     args := os.Args
 
     if args == nil || len(args) < 2 {
@@ -178,7 +200,7 @@ func main() {
             max = number
         }
     }
-/*
+
     fmt.Println("bucket sort")
     bucketSort(list, max)
 
@@ -193,8 +215,13 @@ func main() {
 
     fmt.Println("merge sort")
     mergeSort(list)
-    */
 
     fmt.Println("quick sort")
     quickSort(list)
+    */
+
+    numbers := []int {1, 4, 5, 7, 8, 9}
+    fmt.Println("binary search")
+    fmt.Println(binarySearch(numbers, 4))
+    fmt.Println(binarySearch(numbers, 8))
 }
